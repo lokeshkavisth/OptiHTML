@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Get faster website loading times and improved performance with OptiHTML. Our advanced HTML minifying tool removes unnecessary characters and whitespaces for optimal code efficiency."
+    />
+    <meta
+      name="keywords"
+      content="HTML minify, HTML optimization, HTML minifier, website optimization, website performance, web development"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>OptiHTML - Optimize Your HTML Code for Faster Loading</title>
+  </head>
+  <body>
+    <!-- header  -->
+
+    <header>
+      <nav>
+        <div class="nav-logo"><a href="/">OptiHTML</a></div>
+        <div class="nav-links">
+          <a href="" class="btn"
+            ><ion-icon name="logo-github"></ion-icon> Star on GitHub</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- main  -->
+
+    <main>
+      <article>
+        <h1>OptiHTML - HTML Minifier</h1>
+        <form id="file-form" onsubmit="minifyHTML(event)">
+          <input type="file" id="file-input" accept=".html" />
+
+          <button type="submit">Minify</button>
+        </form>
+
+        <textarea id="minified-output"></textarea>
+
+        <div>
+          <button id="copy-button" onclick="copyMinified()">Copy</button>
+          <a id="download-link" download>Download</a>
+        </div>
+      </article>
+    </main>
+
+    <!-- footer  -->
+    <footer>
+      <p>
+        All right reserved by
+        <a href="https://github.com/lokeshkavisth">Lokesh</a>
+      </p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

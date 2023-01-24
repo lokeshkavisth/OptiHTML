@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+$ff-Poppins: "Poppins", sans-serif;
+$fw-r: 400;
+$fw-sb: 600;
+$fw-b: 700;
+
+* {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  list-style: none;
+  font: inherit;
+  font-family: $ff-Poppins;
+  vertical-align: baseline;
+  font-weight: $fw-r;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+img,
+data,
+span,
+input,
+button,
+select,
+ion-icon,
+textarea,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  background: none;
+  font-size: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  max-width: max-content;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: inherit;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  vertical-align: baseline;
+  background-color: #03001c;
+  color: #b6eada;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+::-moz-scrollbar {
+  display: none;
+}
+
+.btn {
+  max-width: max-content;
+  padding: 0.7rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 3rem;
+  transition: 0.5s ease;
+  color: #ffffff;
+  background-color: #301e67;
+
+  &:is(:hover, :focus-visible) {
+    background-color: #3d287e;
+  }
+}
+
+// navbar
+header {
+  max-width: 100rem;
+  padding: 3rem 0;
+  margin-inline: auto;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .nav-logo {
+      a {
+        font-weight: $fw-b;
+        font-size: clamp(1rem, 5vw, 2rem);
+        background-image: url("https://images.unsplash.com/photo-1579547945413-497e1b99dac0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-size: cover;
+        background-position: left center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .nav-links {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: clamp(0.7rem, 2vw, 1.1rem);
+
+        ion-icon {
+          font-size: clamp(0.8rem, 5vw, 1.5rem);
+        }
+      }
+    }
+  }
+}
+
+// main
+main {
+  padding: 5rem 1rem;
+  article {
+    max-width: 100rem;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+      font-size: clamp(1rem, 8vw, 3.5rem);
+      font-weight: $fw-b;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      #file-input {
+        border: 3px solid #5b8fb9;
+        padding: 1rem;
+        border-radius: 3rem;
+      }
+
+      button {
+        padding: 0.45rem 1.3rem;
+        border-radius: 3rem;
+        font-size: 1.2rem;
+        background-image: linear-gradient(
+          to right,
+          #c0c0aa 0%,
+          #1cefff 51%,
+          #c0c0aa 100%
+        );
+
+        background-size: 200% auto;
+        font-weight: $fw-sb;
+        color: rgba(0, 0, 0, 0.568);
+
+        &:is(:hover, :focus-visible) {
+          background-position: right center;
+        }
+      }
+    }
+
+    #minified-output {
+      min-height: 20rem;
+      border: 3px solid #5b8fb9;
+      padding: 1rem;
+      border-radius: 1rem;
+      resize: none;
+      color: #99d0fd;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      button {
+        padding: 0.3rem 1rem;
+        border-radius: 3rem;
+        transition: 0.3s ease;
+        color: black;
+        background-color: #8affdc;
+        border: 2px solid black;
+        &:is(:hover, :focus-visible) {
+          background-color: #33ffc2;
+        }
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// footer
+footer {
+  padding: 0 1rem;
+  p {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 4rem 0;
+    font-size: clamp(0.7rem, 5vw, 1rem);
+    a {
+      color: #33ffc2;
+      text-decoration: underline;
+    }
+  }
+}
